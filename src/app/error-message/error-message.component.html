@@ -1,0 +1,31 @@
+<!--
+<uxFormGroupSubContent *ngIf="control.errors !== null && control.errors.invalidMsg!== null">
+    <ux-control-feedback type="danger">
+        {{control.errors.invalidMsg | translate : control.errors.params }}
+    </ux-control-feedback>
+    <ux-control-feedback type="danger">
+        {{control.errors.invalidGroupMsg | translate : control.errors.params }}
+    </ux-control-feedback>
+</uxFormGroupSubContent>
+-->
+<small id="errorHelp" class="form-text" style="color: red" *ngIf="control.errors">
+    {{control.errors.controlErrorMsg}}
+</small>
+
+<small id="errorHelp" class="form-text" style="color: red" *ngIf="control.errors">
+    {{control.errors.groupErrorMsg}}
+</small>
+
+<!-- 
+<span class="atomicErrorMsg">
+    {{control.errors.invalidMsg}}
+</span>
+
+<span class="groupErrorMsg">
+    {{control.errors.invalidGroupdMsg}}
+</span>
+
+-->
+
+
+
