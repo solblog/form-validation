@@ -8,7 +8,6 @@
  * a message with parameters.
  */
 
-
 /**
  * defaultRequired: The value in the field is required
  * static required(control: AbstractControl): ValidationErrors | null
@@ -57,7 +56,7 @@ export const maxLenghtDefaultErrMsg = 'The value in the field exceeds the maximu
 export const minLenghtDefaultErrMsg = 'The value in the field can not be less than the minimun lenght';
 
 /*
- **************************************  ATOMIC CUSTOM ELEMENT VALIDATIONS *************************************************
+ **************************************  CONTROL CUSTOM ERROR MESSAGE *************************************************
  */
 
 export const numericValidationErrMsg = 'The value of this field must be numeric';
@@ -69,7 +68,7 @@ export const emailValidationErrMsg = 'Email format not valid';
 export const yearRange2020to2030ValidationErrMsg = 'Range year between 2020 to 2030';
 
 /*
- **************************************  GLOBAL CUSTOM VALIDATIONS *************************************************
+ **************************************  FORM CUSTOM ERROR MESSAGE *********************
  TODO: Pending to add all the validations in this file
  */
 
@@ -83,5 +82,7 @@ export const endDateAfterStartDateErrMsg = 'Please set an End Date and Time that
 export const mandatoryFormFieldsRequired = 'common.mandatoryFields';
 
 export const endYearAfterStartYearMsg = 'common.validation.ui.endyear.higher.startyear';
+
+export const addedNumberMinus30 = 'The added number is less than 30';
 
 export const globalValidationOK = {};

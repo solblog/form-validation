@@ -16,11 +16,13 @@ export class FormErrorsService {
         /*
          * Faster: Check control touched or dirty
          */
+        // console.log('Update error message');
         if (control != null && control.errors != null) {
             if (control.errors.controlErrorMsg) {
               // Custom message already added, nothing to do
+              // console.log('Custom message already added');
             } else {
-                console.log('addDefaultErrorMsg');
+                // console.log('addDefaultErrorMsg');
                 ErrorMsgUtils.addDefaultErrorMsg(control);
             }
         }

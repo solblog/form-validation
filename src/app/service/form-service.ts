@@ -13,21 +13,10 @@ import { ValidationUtils } from '../form-validation/validation-utils';
 /**
  *  The purpose of this service is to host all the methods related to the form elements interactions
  * with the UI and for loading data in these form elements.
- *  PS: The return values of the methods have to be assigned always to a Form component, otherwise
- * the method should be implemented in another service.
+ *  PS: The return values of the methods have to be assigned always to a Form component.
  *
  */
-@Injectable()
 export class FormElementsService {
-
-
-    /*
-    constructor(
-    ) {
-        // const loc: Locales = new Locales();
-    }
-    */
-
 
     /**
      * Form Select Load data Functions
@@ -367,8 +356,10 @@ export class FormElementsService {
     // tslint:disable-next-line: ban-types
     static traverseForm(group: FormGroup | FormArray, visitor: Function) {
 
-        Object.keys(group.controls).forEach((key: string) => {
+        console.log('traverseForm');
 
+        Object.keys(group.controls).forEach((key: string) => {
+            console.log(key);
             const abstractControl = group.controls[key];
 
             if (abstractControl instanceof FormGroup || abstractControl instanceof FormArray) {

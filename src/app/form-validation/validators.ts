@@ -16,31 +16,7 @@ import { ValidationUtils } from './validation-utils';
 import { maxLenghtDefaultErrMsg } from '../form-errors/err-msg';
 import { ErrorMsgUtils } from '../form-errors/errors-utils';
 
-export class SFC2021Validators {
-
-    static requiredIf(predicate) {
-        return (control: AbstractControl) => {
-            if (!control.parent) {
-                return null;
-            }
-            if (predicate()) {
-                return Validators.required(control);
-            }
-            return null;
-        };
-    }
-
-    static conditionalValidator(predicate, validator) {
-        return (control: AbstractControl) => {
-            if (!control.parent) {
-                return null;
-            }
-            if (predicate()) {
-                return validator(control);
-            }
-            return null;
-        };
-    }
+export class MyProjectValidators {
 
     static numericValidator(control: AbstractControl): ValidationErrors | null {
         return ValidationUtils.noMatchRegExpValidator(numericValidator)(control);
@@ -84,5 +60,29 @@ export class SFC2021Validators {
     static hasHyphenValidator(control: AbstractControl): ValidationErrors | null {
         return ValidationUtils.matchRegExpValidator(oneHyphenValidator)(control);
     }
+
+    static requiredIf(predicate) {
+      return (control: AbstractControl) => {
+          if (!control.parent) {
+              return null;
+          }
+          if (predicate()) {
+              return Validators.required(control);
+          }
+          return null;
+      };
+  }
+
+  static conditionalValidator(predicate, validator) {
+      return (control: AbstractControl) => {
+          if (!control.parent) {
+              return null;
+          }
+          if (predicate()) {
+              return validator(control);
+          }
+          return null;
+      };
+  }
 
 }

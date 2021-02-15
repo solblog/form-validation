@@ -61,6 +61,7 @@ export class ValidationUtils {
     /*
       * TODO: Create a generic one for all form Elements.
       * By default select can have just one validator mandatory or not.
+      * Pending to implement as a conditional Validators.
     */
 
     static updateSelectValidators(mandatory: boolean, hideSelect: boolean, form: FormGroup, formElementId: string) {

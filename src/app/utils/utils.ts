@@ -1,6 +1,6 @@
 /**
  * @author: solsun
- * The purpose of this service is to host all the function related with the atomic form validations
+ * The purpose of this service is to host all the util functions.
  */
 
 import { removeSpacesAndTags } from '../form-validation/regexp-validators';
